@@ -24,6 +24,7 @@ public abstract class Car implements Rentable {
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
+
     // --- OPSIYONEL OZELLIK: Hasar Raporu ---
     private String damageReport;
 
@@ -40,4 +41,7 @@ public abstract class Car implements Rentable {
     public String getDamageReport() {
         return (damageReport == null) ? "Hasar Kaydi Yok" : damageReport;
     }
+    // --- OPSIYONEL OZELLIK: Yakit Tuketimi (Abstract Metot) ---
+    // Her arac sinifi kendi tuketim bilgisini dondurmek ZORUNDADIR.
+    public abstract String getFuelConsumptionInfo();
 }

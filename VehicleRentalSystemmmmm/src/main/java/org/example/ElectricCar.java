@@ -6,6 +6,10 @@ public class ElectricCar extends Car {
     public ElectricCar(String vehicleId, String model, double dailyRate) {
         super(vehicleId, model, dailyRate); // Ata sınıfın (Car) özelliklerini ayarla
     }
+    @Override
+    public String getFuelConsumptionInfo() {
+        return "Ortalama Tuketim: 15 kWh / 100 km (Elektrik)";
+    }
 
     @Override
     public double calculateRentalFee(int dayCount) {
