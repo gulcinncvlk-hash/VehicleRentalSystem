@@ -36,4 +36,20 @@ public class CarInventory {
         }
         return null; // Bulunamazsa boş döner
     }
+    // --- OPSIYONEL OZELLIK: Arama/Filtreleme ---
+    public void searchCar(String query) {
+        System.out.println("\n--- Arama Sonuclari: " + query + " ---");
+        boolean found = false;
+        for (Car car : cars) {
+            // Kucuk/buyuk harf duyarliligini kaldirmak icin toLowerCase kullandik
+            if (car.getModel().toLowerCase().contains(query.toLowerCase())) {
+                System.out.println(car.getVehicleId() + " - " + car.getModel() +
+                        " (" + (car.isAvailable() ? "Musait" : "Dolu") + ")");
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Aradiginiz kriterlere uygun arac bulunamadi.");
+        }
+    }
 }
