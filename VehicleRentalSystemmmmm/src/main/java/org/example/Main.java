@@ -1,17 +1,36 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("=== ARAC KIRALAMA SISTEMI DEMO ===\n");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // 1. Envanteri Olustur
+        CarInventory inventory = new CarInventory();
+
+        // 2. Arabalari Uret (Polimorfizm: Biri elektrikli, biri benzinli)
+        Car car1 = new ElectricCar("34TESLA", "Tesla Model Y", 2000);
+        Car car2 = new GasCar("34BMW", "BMW 320i", 1500);
+
+        // 3. Arabalari Envantere Ekle
+        inventory.addCar(car1);
+        inventory.addCar(car2);
+
+        // 4. Musait Araclari Listele
+        inventory.listAvailableCars();
+
+        // 5. Musteri Olustur
+        Customer customer1 = new Customer("Ahmet Yilmaz", "12345678901");
+
+        // 6. Kiralama Yap (Tesla'yı 3 günlüğüne kirala)
+        System.out.println("\n--- Kiralama Islemi ---");
+        Car selectedCar = inventory.findCarById("34TESLA");
+
+        if (selectedCar != null) {
+            Rental rental1 = new Rental(selectedCar, customer1, 3);
+            rental1.startRental();
         }
+
+        // 7. Tekrar Listele (Tesla artık görünmemeli veya dolu gözükmeli)
+        inventory.listAvailableCars();
     }
 }
