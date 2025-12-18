@@ -14,6 +14,17 @@ public class CarInventory {
         cars.add(car);
         System.out.println(car.getModel() + " envantere eklendi.");
     }
+    // --- GEREKLI OZELLIK: Arac Silme ---
+    public void removeCar(String vehicleId) {
+        // Java 8 ve sonrasi icin pratik silme yontemi (removeIf)
+        boolean isRemoved = cars.removeIf(car -> car.getVehicleId().equals(vehicleId));
+
+        if (isRemoved) {
+            System.out.println(vehicleId + " plakali arac sistemden silindi.");
+        } else {
+            System.out.println("Hata: " + vehicleId + " plakali arac bulunamadi!");
+        }
+    }
 
     // Müsait olan araçları listeleme (Hocanın istediği özellik)
     public void listAvailableCars() {
