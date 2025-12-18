@@ -26,4 +26,12 @@ public class Rental {
             System.out.println("Hata: " + car.getModel() + " su an musait degil.");
         }
     }
+    // --- YENI OZELLIK: Arac Iade ---
+    public void returnCar() {
+        System.out.println("\n--- Iade Islemi ---");
+        // Araci tekrar musait duruma getir
+        car.setAvailable(true);
+        System.out.println("Arac basariyla iade alindi: " + car.getModel());
+        System.out.println("Musteri " + customer.getName() + " tarafindan teslim edildi.");
+    }
 }
