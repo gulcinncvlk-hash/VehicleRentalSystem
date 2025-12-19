@@ -1,5 +1,9 @@
 package org.example;
-
+/**
+ * Arac kiralama sistemindeki temel arac sinifi (Base Class).
+ * Tum arac turleri (Elektrikli, Benzinli) bu soyut siniftan turetilir.
+ * Aracin ID, model, gunluk ucret ve musaitlik durumu gibi ortak ozelliklerini yonetir.
+ */
 // 'abstract' yapıyoruz çünkü tek başına 'Araba' diye bir şey üretilmez, modeli olur.
 public abstract class Car implements Rentable {
     private String vehicleId;   // Plaka veya ID

@@ -1,5 +1,9 @@
 package org.example;
-
+/**
+ * Elektrikli araclari temsil eden alt sinif.
+ * Fiyat hesaplamasi (calculateRentalFee) gunluk bazda standart tarife uzerinden yapilir.
+ * Yakit tuketimi kWh cinsinden hesaplanir.
+ */
 public class ElectricCar extends Car {
 
     // Kurucu Metot (Constructor)
