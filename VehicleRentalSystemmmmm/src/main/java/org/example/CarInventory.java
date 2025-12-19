@@ -63,4 +63,8 @@ public class CarInventory {
             System.out.println("Aradiginiz kriterlere uygun arac bulunamadi.");
         }
     }
+    // Testler icin gerekli getter metodu
+    public java.util.List<Car> getCars() {
+        return cars;
+    }
 }
