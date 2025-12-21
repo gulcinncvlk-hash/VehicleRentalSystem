@@ -1,4 +1,5 @@
 package org.example;
+
 /**
  * Arac kiralama sistemindeki temel arac sinifi (Base Class).
  * Tum arac turleri (Elektrikli, Benzinli) bu soyut siniftan turetilir.
@@ -20,10 +21,21 @@ public abstract class Car implements Rentable {
     }
 
     // Getter ve Setter Metotları (Erişim için)
-    public String getVehicleId() { return vehicleId; }
-    public String getModel() { return model; }
-    public double getDailyRate() { return dailyRate; }
-    public boolean isAvailable() { return isAvailable; }
+    public String getVehicleId() {
+        return vehicleId;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getDailyRate() {
+        return dailyRate;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
 
     public void setAvailable(boolean available) {
         isAvailable = available;
@@ -45,6 +57,7 @@ public abstract class Car implements Rentable {
     public String getDamageReport() {
         return (damageReport == null) ? "Hasar Kaydi Yok" : damageReport;
     }
+
     // --- OPSIYONEL OZELLIK: Yakit Tuketimi (Abstract Metot) ---
     // Her arac sinifi kendi tuketim bilgisini dondurmek ZORUNDADIR.
     public abstract String getFuelConsumptionInfo();

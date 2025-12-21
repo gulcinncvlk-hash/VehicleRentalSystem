@@ -1,4 +1,5 @@
 package org.example;
+
 /**
  * Musteri bilgilerini ve kiralama gecmisini yoneten sinif.
  * Her musterinin adi, iletisim bilgisi ve kiraladigi araclar burada tutulur.
@@ -13,6 +14,11 @@ public class Customer {
         this.tckn = tckn;
     }
 
-    public String getName() { return name; }
-    public String getTckn() { return tckn; }
+    public String getName() {
+        return name;
+    }
+
+    public String getTckn() {
+        return tckn;
+    }
 }

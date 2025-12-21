@@ -1,4 +1,5 @@
 package org.example;
+
 /**
  * Kiralama islemlerini (Transaction) temsil eden sinif.
  * Hangi musterinin, hangi araci, kac gunlugune kiraladigini ve toplam tutari kayit altina alir.
@@ -29,6 +30,7 @@ public class Rental {
             System.out.println("Hata: " + car.getModel() + " su an musait degil.");
         }
     }
+
     // --- YENI OZELLIK: Arac Iade ---
     public void returnCar() {
         System.out.println("\n--- Iade Islemi ---");

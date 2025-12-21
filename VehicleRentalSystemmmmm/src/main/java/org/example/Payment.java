@@ -5,6 +5,7 @@ public class Payment {
     public void processPayment(double amount) {
         System.out.println("Odeme alindi: " + amount + " TL");
     }
+
     // Kredi karti numarasinin gecerliligini kontrol eden metot
     public boolean validateCard(String cardNumber) {
         // Kart numarasi 16 haneli olmalidir (Basit kural)

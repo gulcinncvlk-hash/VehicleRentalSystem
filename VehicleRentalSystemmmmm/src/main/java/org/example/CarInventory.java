@@ -3,6 +3,7 @@ package org.example;
  * Arac filosunu yoneten merkezi envanter sinifi.
  * Listeye yeni arac ekleme, silme ve mevcut araclari listeleme islemleri burada yapilir.
  */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class CarInventory {
         cars.add(car);
         System.out.println(car.getModel() + " envantere eklendi.");
     }
+
     // --- GEREKLI OZELLIK: Arac Silme ---
     public void removeCar(String vehicleId) {
         // Java 8 ve sonrasi icin pratik silme yontemi (removeIf)
@@ -51,6 +53,7 @@ public class CarInventory {
         }
         return null; // Bulunamazsa boş döner
     }
+
     // --- OPSIYONEL OZELLIK: Arama/Filtreleme ---
     public void searchCar(String query) {
         System.out.println("\n--- Arama Sonuclari: " + query + " ---");
@@ -67,6 +70,7 @@ public class CarInventory {
             System.out.println("Aradiginiz kriterlere uygun arac bulunamadi.");
         }
     }
+
     // Testler icin gerekli getter metodu
     public java.util.List<Car> getCars() {
         return cars;
