@@ -1,5 +1,8 @@
 package org.example;
-
+/**
+ * Kiralama islemlerini (Transaction) temsil eden sinif.
+ * Hangi musterinin, hangi araci, kac gunlugune kiraladigini ve toplam tutari kayit altina alir.
+ */
 public class Rental {
     private Car car;
     private Customer customer;

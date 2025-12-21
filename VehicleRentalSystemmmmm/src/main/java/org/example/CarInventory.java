@@ -1,4 +1,8 @@
 package org.example;
+/**
+ * Arac filosunu yoneten merkezi envanter sinifi.
+ * Listeye yeni arac ekleme, silme ve mevcut araclari listeleme islemleri burada yapilir.
+ */
 import java.util.ArrayList;
 import java.util.List;
 
