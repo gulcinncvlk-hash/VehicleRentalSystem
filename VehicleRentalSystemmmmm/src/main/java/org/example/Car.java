@@ -61,4 +61,22 @@ public abstract class Car implements Rentable {
     // --- OPSIYONEL OZELLIK: Yakit Tuketimi (Abstract Metot) ---
     // Her arac sinifi kendi tuketim bilgisini dondurmek ZORUNDADIR.
     public abstract String getFuelConsumptionInfo();
+    // --- Kiralama ve Iade Metotlari (Testin Calismasi Icin Gerekli) ---
+
+    public void rent(String customerName, int days) {
+        // Eger arac zaten kiradaysa uyar
+        if (!isAvailable) {
+            System.out.println("HATA: Arac zaten kirada!");
+            return;
+        }
+
+        // Degilse kirala
+        this.isAvailable = false; // Durumu 'Dolu' yap
+        System.out.println(getModel() + " araci " + customerName + " kisisine " + days + " gunlugune kiralandi.");
+    }
+
+    public void returnCar() {
+        this.isAvailable = true; // Durumu tekrar 'Musait' yap
+        System.out.println(getModel() + " araci basariyla iade alindi.");
+    }
 }
