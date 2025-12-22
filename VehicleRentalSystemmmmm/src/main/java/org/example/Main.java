@@ -14,7 +14,17 @@ public class Main {
         // 3. Arabalari Envantere Ekle
         inventory.addCar(car1);
         inventory.addCar(car2);
+// --- DEMO ICIN EKLENEN YENI ARACLAR ---
 
+        // 1. Yerli ve Milli: TOGG T10X (Elektrikli)
+        // Polimorfizm Ornegi: ElectricCar nesnesi 'Car' olarak ekleniyor
+        inventory.addCar(new ElectricCar("34TOGG2023", "TOGG T10X", 1200));
+
+        // 2. Luks Segment: Mercedes C200 (Benzinli)
+        inventory.addCar(new GasCar("06MERC06", "Mercedes C200", 1500));
+
+        // 3. Ekonomik Sinif: Fiat Egea (Benzinli)
+        inventory.addCar(new GasCar("16BURSA16", "Fiat Egea", 600));
         // 4. Musait Araclari Listele
         inventory.listAvailableCars();
 
