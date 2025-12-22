@@ -41,6 +41,15 @@ public class Main {
         }
 
         // 7. Tekrar Listele (Tesla artık görünmemeli veya dolu gözükmeli)
-        inventory.listAvailableCars();
+
+        // --- METHOD OVERLOADING TESTI (Akilli Arama) ---
+        System.out.println("\n** AKILLI ARAMA TESTLERI **");
+
+        // 1. Isim ile arama testi (String gonderiyoruz)
+        inventory.searchCar("TOGG");
+
+        // 2. Butce ile arama testi (Sayi gonderiyoruz - 1000 TL alti)
+        inventory.searchCar(1000);
     }
+
 }

@@ -54,21 +54,32 @@ public class CarInventory {
         return null; // Bulunamazsa boş döner
     }
 
-    // --- OPSIYONEL OZELLIK: Arama/Filtreleme ---
-    public void searchCar(String query) {
-        System.out.println("\n--- Arama Sonuclari: " + query + " ---");
+    // --- METHOD OVERLOADING ORNEKLERI (Guncellenmis Versiyon) ---
+
+    // 1. Isme Gore Arama (Eski kodunun aynisi, buraya tasidik)
+    public void searchCar(String modelName) {
+        System.out.println("--- '" + modelName + "' icin Arama Sonuclari ---");
         boolean found = false;
         for (Car car : cars) {
-            // Kucuk/buyuk harf duyarliligini kaldirmak icin toLowerCase kullandik
-            if (car.getModel().toLowerCase().contains(query.toLowerCase())) {
-                System.out.println(car.getVehicleId() + " - " + car.getModel() +
-                        " (" + (car.isAvailable() ? "Musait" : "Dolu") + ")");
+            if (car.getModel().toLowerCase().contains(modelName.toLowerCase())) {
+                System.out.println(car.getVehicleId() + " - " + car.getModel() + " (" + car.calculateRentalFee(1) + " TL)");
                 found = true;
             }
         }
-        if (!found) {
-            System.out.println("Aradiginiz kriterlere uygun arac bulunamadi.");
+        if (!found) System.out.println("Bu modelde arac bulunamadi.");
+    }
+
+    // 2. Fiyata Gore Arama (Bu YEPYENI bir ozellik)
+    public void searchCar(double maxPrice) {
+        System.out.println("--- " + maxPrice + " TL altindaki Araclar ---");
+        boolean found = false;
+        for (Car car : cars) {
+            if (car.calculateRentalFee(1) <= maxPrice) {
+                System.out.println(car.getModel() + " - Fiyat: " + car.calculateRentalFee(1) + " TL");
+                found = true;
+            }
         }
+        if (!found) System.out.println("Bu fiyata uygun arac yok.");
     }
 
     // Testler icin gerekli getter metodu
