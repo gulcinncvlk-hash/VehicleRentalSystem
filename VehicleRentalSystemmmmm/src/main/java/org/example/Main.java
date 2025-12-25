@@ -71,6 +71,23 @@ public class Main {
         // 4. Adim: Veli Bey tekrar deniyor (Simdi basarili olmali)
         System.out.println("-> Veli Bey tekrar deniyor...");
         togg.rent("Veli Kaya", 2);
+        // --- SENARYO: Hasar ve Tamir Testi ---
+        System.out.println("\n** HASAR RAPORU TESTI **");
+
+        // 1. Arabaya hasar verelim
+        Car bmw = inventory.getCars().get(1); // Listeden bir arac (TOGG veya BMW)
+        bmw.reportDamage("On tampon kirik");
+
+        // 2. Hasarli arabayi kiralamaya calisalim (Sistem artik 'HATA' vermeli!)
+        System.out.println("-> Hasarli arac kiralanmaya calisiliyor...");
+        bmw.rent("Mehmet", 2);
+
+        // 3. Arabayi tamir edelim
+        bmw.repairCar();
+
+        // 4. Tekrar kiralayalim (Simdi basarili olmali)
+        System.out.println("-> Tamir sonrasi kiralama deneniyor...");
+        bmw.rent("Mehmet", 2);
     }
 
 }

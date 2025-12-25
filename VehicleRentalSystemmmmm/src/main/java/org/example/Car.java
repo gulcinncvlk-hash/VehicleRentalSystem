@@ -6,11 +6,12 @@ package org.example;
  * Aracin ID, model, gunluk ucret ve musaitlik durumu gibi ortak ozelliklerini yonetir.
  */
 // 'abstract' yapıyoruz çünkü tek başına 'Araba' diye bir şey üretilmez, modeli olur.
-public abstract class Car implements Rentable {
+public abstract class Car implements Rentable ,Maintainable {
     private String vehicleId;   // Plaka veya ID
     private String model;       // Model (örn: Toyota Corolla)
     private double dailyRate;   // Günlük Taban Fiyat
-    private boolean isAvailable; // Müsait mi?
+    private boolean isAvailable;
+    private String damageDescription; // Hasar aciklamasi (Bos ise hasarsizdir)// Müsait mi?
 
     // Kurucu Metot (Constructor)
     public Car(String vehicleId, String model, double dailyRate) {
@@ -45,11 +46,13 @@ public abstract class Car implements Rentable {
     private String damageReport;
 
     public void reportDamage(String report) {
+        this.isAvailable = false;
         this.damageReport = report;
         System.out.println(getModel() + " icin hasar kaydedildi: " + report);
     }
 
     public void repairCar() {
+        this.isAvailable = true;
         this.damageReport = null;
         System.out.println(getModel() + " tamir edildi, hasar kaydi silindi.");
     }
@@ -78,5 +81,8 @@ public abstract class Car implements Rentable {
     public void returnCar() {
         this.isAvailable = true; // Durumu tekrar 'Musait' yap
         System.out.println(getModel() + " araci basariyla iade alindi.");
+
+
     }
+
 }
