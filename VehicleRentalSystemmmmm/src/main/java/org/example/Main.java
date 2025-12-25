@@ -50,6 +50,27 @@ public class Main {
 
         // 2. Butce ile arama testi (Sayi gonderiyoruz - 1000 TL alti)
         inventory.searchCar(1000);
+        // --- SENARYO: Kiralama ve Cakisma Testi (Concurrency Demo) ---
+        System.out.println("\n** GELISMIS KIRALAMA SENARYOSU **");
+
+        // Listeden 2. siradaki araci (TOGG) secelim
+        Car togg = inventory.getCars().get(1);
+
+        // 1. Adim: Ali Bey kiraliyor (Basarili olmali)
+        System.out.println("-> Ali Bey TOGG'u kiralamaya calisiyor...");
+        togg.rent("Ali Yilmaz", 3);
+
+        // 2. Adim: Veli Bey AYNI araci kiralamaya calisiyor (Sistem 'DOLU' hatasi vermeli)
+        System.out.println("-> Veli Bey (baskasi) ayni araci kiralamaya calisiyor...");
+        togg.rent("Veli Kaya", 2);
+
+        // 3. Adim: Ali Bey araci iade ediyor
+        System.out.println("-> Ali Bey araci iade ediyor...");
+        togg.returnCar();
+
+        // 4. Adim: Veli Bey tekrar deniyor (Simdi basarili olmali)
+        System.out.println("-> Veli Bey tekrar deniyor...");
+        togg.rent("Veli Kaya", 2);
     }
 
 }
