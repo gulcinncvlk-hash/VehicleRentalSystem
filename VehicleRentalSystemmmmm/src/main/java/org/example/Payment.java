@@ -1,5 +1,10 @@
 package org.example;
-
+/**
+ * Ödeme işlemlerini simüle eden ve kart doğrulama kontrollerini yapan yardımcı sınıf.
+ * <p>
+ * Gerçek bir banka entegrasyonu yerine konsol çıktıları ile işlem taklidi yapar.
+ * </p>
+ */
 public class Payment {
     // Odeme islemleri burada yapilacak
     public void processPayment(double amount) {

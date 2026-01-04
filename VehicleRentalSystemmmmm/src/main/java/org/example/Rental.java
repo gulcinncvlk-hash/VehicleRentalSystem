@@ -1,8 +1,8 @@
 package org.example;
 
 /**
- * Kiralama islemlerini (Transaction) temsil eden sinif.
- * Hangi musterinin, hangi araci, kac gunlugune kiraladigini ve toplam tutari kayit altina alir.
+ * Müşteri bilgilerini (Ad, Soyad, TC vb.) güvenli bir şekilde tutan model sınıfı.
+ * Veri bütünlüğünü sağlamak için Kapsülleme (Encapsulation) kullanır.
  */
 public class Rental {
     private Car car;

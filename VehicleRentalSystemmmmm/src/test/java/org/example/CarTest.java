@@ -1,5 +1,11 @@
 package org.example;
-
+/**
+ * Projenin iş mantığını (Business Logic) doğrulayan birim testleri (Unit Tests).
+ * <p>
+ * JUnit kullanılarak; kiralama döngüsü, durum değişikliği ve
+ * polimorfik fiyat hesaplamaları test edilir.
+ * </p>
+ */
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

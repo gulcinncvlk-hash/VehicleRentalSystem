@@ -1,9 +1,14 @@
 package org.example;
-
-/**
- * Arac kiralama sistemindeki temel arac sinifi (Base Class).
- * Tum arac turleri (Elektrikli, Benzinli) bu soyut siniftan turetilir.
- * Aracin ID, model, gunluk ucret ve musaitlik durumu gibi ortak ozelliklerini yonetir.
+ /**
+ * Tüm araç türlerinin (Benzinli, Elektrikli) türetildiği ATA (Base) sınıftır.
+ * <p>
+ * Bu sınıf şunları yönetir:
+ * <ul>
+ * <li>Araç özellikleri (Marka, Model, Plaka)</li>
+ * <li>Kiralama durumu (Müsait mi, Dolu mu?)</li>
+ * <li>Hasar ve Tamir durumları {@link Maintainable}</li>
+ * </ul>
+ * </p>
  */
 // 'abstract' yapıyoruz çünkü tek başına 'Araba' diye bir şey üretilmez, modeli olur.
 public abstract class Car implements Rentable ,Maintainable {

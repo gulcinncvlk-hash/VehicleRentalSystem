@@ -1,9 +1,11 @@
 package org.example;
 
 /**
- * Benzinli araclari temsil eden alt sinif.
- * Kiralama ucretine cevresel etki ve servis bedeli gibi ek vergiler dahil edilir.
- * Yakit tuketimi Litre cinsinden ifade edilir.
+ * Benzinli araçları temsil eden ve Car sınıfından türetilen alt sınıf.
+ * <p>
+ * Bu sınıf, kiralama ücretine ek hizmet bedelleri veya vergiler ekleyebilir.
+ * Yakıt tüketim bilgisi Litre cinsinden verilir.
+ * </p>
  */
 public class GasCar extends Car {
 

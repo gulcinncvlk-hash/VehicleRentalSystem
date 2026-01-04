@@ -1,6 +1,12 @@
 package org.example;
-
+/**
+ * Envanter yönetimini test eden birim testleri.
+ * <p>
+ * Araç ekleme, silme ve liste boyutunun doğruluğunu kontrol eder.
+ * </p>
+ */
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CarInventoryTest {

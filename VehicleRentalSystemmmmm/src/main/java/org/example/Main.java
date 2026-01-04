@@ -1,6 +1,13 @@
 package org.example;
 
 public class Main {
+    /**
+     * PROJE GİRİŞ NOKTASI (TEST SENARYOLARI).
+     * <p>
+     * Bu metot; Polimorfizm, Interface, Kalıtım ve Hata Yönetimi
+     * gibi OOP prensiplerinin çalıştığını kanıtlayan senaryoları çalıştırır.
+     * </p>
+     */
     public static void main(String[] args) {
         System.out.println("=== ARAC KIRALAMA SISTEMI DEMO ===\n");
 

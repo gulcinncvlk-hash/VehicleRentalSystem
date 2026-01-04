@@ -1,7 +1,10 @@
 package org.example;
 /**
- * Arac filosunu yoneten merkezi envanter sinifi.
- * Listeye yeni arac ekleme, silme ve mevcut araclari listeleme islemleri burada yapilir.
+ * Filo Yönetim Merkezi.
+ * <p>
+ * Sistemdeki tüm araçların listesini tutar. Araç ekleme, silme,
+ * listeleme ve gelişmiş arama (Overloading) işlemlerini yönetir.
+ * </p>
  */
 
 import java.util.ArrayList;

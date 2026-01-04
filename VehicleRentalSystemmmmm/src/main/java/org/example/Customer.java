@@ -1,10 +1,9 @@
 package org.example;
 
 /**
- * Musteri bilgilerini ve kiralama gecmisini yoneten sinif.
- * Her musterinin adi, iletisim bilgisi ve kiraladigi araclar burada tutulur.
+ * Müşteri bilgilerini (Ad, Soyad, TC vb.) güvenli bir şekilde tutan model sınıfı.
+ * Veri bütünlüğünü sağlamak için Kapsülleme (Encapsulation) kullanır.
  */
-
 public class Customer {
     private String name;
     private String tckn; // ID veya TC Kimlik No

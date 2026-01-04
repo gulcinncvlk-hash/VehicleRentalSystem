@@ -1,9 +1,11 @@
 package org.example;
 
 /**
- * Elektrikli araclari temsil eden alt sinif.
- * Fiyat hesaplamasi (calculateRentalFee) gunluk bazda standart tarife uzerinden yapilir.
- * Yakit tuketimi kWh cinsinden hesaplanir.
+ * Elektrikli araçları temsil eden çevre dostu araç sınıfı.
+ * <p>
+ * Fiyat hesaplaması standart günlük tarife üzerinden yapılır.
+ * Yakıt tüketim bilgisi kWh (Kilowatt-saat) cinsinden verilir.
+ * </p>
  */
 public class ElectricCar extends Car {
 
