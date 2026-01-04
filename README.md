@@ -23,10 +23,14 @@ Kullanıcıların araçları listelemesi, müsaitlik durumunu kontrol etmesi, ki
 * src/main/java/org/example -> Kaynak kodlar (Backend & GUI)
 * src/test/java -> JUnit test dosyaları
 * Dokumanlar/ -> UML Diyagramları ve Rapor görselleri
+---
+## 📊 UML Tasarımları
 
-## 📸 Ekran Görüntüleri
-(Buraya daha sonra arayüzün ekran görüntüsünü ekleyebilirsiniz)
+### 1. Use Case Diyagramı
+![Use Case Diyagramı](Dokumanlar/use.png)
 
+### 2. Class (Sınıf) Diyagramı
+![Class Diyagramı](Dokumanlar/nesne umlsii.jpg)
 ## 👨‍💻 Geliştirici
 * *Ad Soyad:* Gülçin Civelek
 * *Bölüm:* Bilgisayar Mühendisliği
